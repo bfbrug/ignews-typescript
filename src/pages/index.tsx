@@ -13,9 +13,9 @@ interface IHomeProps {
 }
 
 export default function Home({ product }: IHomeProps) {
-  const amount = new Intl.NumberFormat(`en-US`, {
-    style: `currency`,
-    currency: `USD`,
+  const amount = new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
   }).format(product.amount / 100);
 
   return (
@@ -43,7 +43,7 @@ export default function Home({ product }: IHomeProps) {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const price = await stripe.prices.retrieve(`price_1L9zUeEqqSnzTTBSKBJJf2bR`);
+  const price = await stripe.prices.retrieve('price_1L9zUeEqqSnzTTBSKBJJf2bR');
 
   const product = {
     priceId: price.id,

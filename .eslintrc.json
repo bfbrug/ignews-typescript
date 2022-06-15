@@ -69,6 +69,9 @@
     "react/jsx-no-bind": ["error", {
       "allowArrowFunctions": true,
       "allowFunctions": true
+    }],
+    "import/no-anonymous-default-export": ["error", {
+      "allowArrowFunction": true
     }]
   },
   "overrides": [
